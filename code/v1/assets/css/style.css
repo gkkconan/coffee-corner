@@ -1,0 +1,87 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: "PT Sans", Calibri, Tahoma, sans-serif;}
+::selection{color: var(--cafe-noir); background: var(--white-chocolate);}
+
+:root{
+    --cafe-noir: #492D12;
+    --mud: #775A41;
+    --beaver: #A7856C;
+    --dust-storm: #E2CCBA;
+    --white-chocolate: #F0E6DA;
+}
+
+.inline-logo{
+    width: 300px; height: 30px;
+    margin-right: 30px;
+    background: url('../images/brand/linear.svg') no-repeat center;
+    background-size: contain;
+}
+
+.center-flex{display: flex; align-items: center; justify-content: center;}
+.center-grid, a{display: grid; place-items: center;}
+
+a{text-decoration: none; color: var(--cafe-noir);}
+img{width: 30px; height: 30px;}
+
+
+
+
+
+/*** HEADER ***/
+
+header{
+    width: 100%; height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--dust-storm);
+}
+header > a{display: none;}                  /* hamburger-menu */
+
+nav > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav > ul li{display: flex; align-items: center; margin-inline: 15px;}
+li:nth-child(-n+3) a::after{
+    content: "";
+    width: 100%; height: 0;
+    position: relative;
+    background: currentColor;
+    transition: .1s;
+}
+
+li:nth-child(-n+3) a:hover::after, li a.active::after{
+    content: "";
+    width: 100%; height: 2px;
+    position: relative;
+    background: currentColor;
+    transition: .1s;
+}
+
+
+
+/*** CAROUSEL SECTION ***/
+
+#carousel{width: 100%; height: calc(100vh - 70px);}
+
+.carousel{
+    width: 80vw; height: 80%;
+    position: relative;
+    border-radius: 15px;
+    background: url('../images/carouselSlides/01.jpg'), #00000070;
+    background-blend-mode: multiply;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.carousel h1{position: relative; font-size: 3.5rem;}
+.carousel h3{position: absolute; right: 17px; bottom: 17px; font-weight: normal;}
+
+.controls{width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.controls img{width: 35px; height: 35px; margin: 10px; cursor: pointer;}
+.controls img:nth-child(1){rotate: -90deg;}
+.controls img:nth-child(2), .controls img:nth-child(3){rotate: 90deg;}

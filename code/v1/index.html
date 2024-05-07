@@ -1,80 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Corner</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coffee Corner</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="author" href="https://github.com/gkkconan" />
+        <link rel="canonical" href="index.html" /> <!-- MORE RAPPRESENTATIVE WEBSITE PAGE URL -->
+        <meta name="description" content="
+            Our story was originally born in a small urban center,
+            among small alleys and skyscrapers, in the heart of the city.
+            It all began as a coffee enthusiast from a young age,
+            James felt the call of coffee and its immensurable aroma.
+            His curiosity to discover the secrets behind each cup led him
+            to travel the world, peering into distant lands and
+            ancient traditions for the key to the perfect coffee." />
 
-    <nav>
-        <img src="" alt="logo">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><img src="" alt="cart"></li>
-            <li><img src="" alt="profile"></li>
-        </ul>
-    </nav>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Coffee Corner" />
+        <meta property="og:site_name" content="Coffee Corner" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:url" content="index.html" /> <!-- WEBSITE URL -->
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="
+            Our story was originally born in a small urban center,
+            among small alleys and skyscrapers, in the heart of the city.
+            It all began as a coffee enthusiast from a young age,
+            James felt the call of coffee and its immensurable aroma.
+            His curiosity to discover the secrets behind each cup led him
+            to travel the world, peering into distant lands and
+            ancient traditions for the key to the perfect coffee." />
+        <meta property="og:image" content="" /> <!-- INSERT CARD IMAGEs (1200 x 630px) -->
 
-    <main>
+        <!-- Open Graph / Twitter -->
+        <meta property="twitter:title" content="Coffee Corner" />
+        <meta property="twitter:description" content="
+            Our story was originally born in a small urban center,
+            among small alleys and skyscrapers, in the heart of the city.
+            It all began as a coffee enthusiast from a young age,
+            James felt the call of coffee and its immensurable aroma.
+            His curiosity to discover the secrets behind each cup led him
+            to travel the world, peering into distant lands and
+            ancient traditions for the key to the perfect coffee." />
+        <meta property="twitter:image" content="" /> <!-- INSERT CARD IMAGEs (1200 x 630px) -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="index.html" /> <!-- WEBSITE URL -->
+    </head>
+    <body>
 
-        <!-- CAROUSEL -->
-        <section id="carousel"></section>
+        <header>
+            <div class="inline-logo"></div> <!-- BACKGROUND IMAGE -->
+            <nav>
+                <ul>
+                    <li> <a href="" class="active">Home</a> </li>
+                    <li> <a href="">Shop</a> </li>
+                    <li> <a href="">Contacts</a> </li>
+                    <li> <a href=""> <img src="assets/images/icons/cart.svg" alt="cart" /> </a> </li>
+                    <li> <a href=""> <img src="assets/images/icons/profile.svg" alt="profile" /> </a> </li>
+                </ul>
+            </nav>
+            <a href=""> <img src="assets/images/icons/hamburger-menu.svg" alt="hamburger-menu" /> </a>
+        </header>
 
-        <!-- PRODUCT SECTION -->
-        <section id="products">
-            <div class="cards">
-                <div class="card">
-                    <img src="" alt="product image">
-                    <h3>Title</h3>
-                    <img src="" alt="rating">
-                    <h2>11.69€</h2>
-                    <button><img src="" alt="buy"></button>
+        <main>
+            <!-- CAROUSEL -->
+            <section id="carousel" class="center-grid">
+
+                <div class="carousel center-grid">
+                    <h3>Discover all our products!</h3>
+
+                    <div class="controls">
+                        <img src="assets/images/icons/chevron-white.svg" alt="left chevron" />
+                        <h1>Where passion <br> and coffee blend</h1>
+                        <img src="assets/images/icons/chevron-white.svg" alt="right chevron" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="controls">
-                <img src="" alt="left chevron">
-                <img src="" alt="right chevron">
-            </div>
-        </section>
+            </section>
 
-        <!-- TESTIMONIALS SECTION -->
-        <section id="testimonials">
-            <div class="testimonial">
-                <img src="" alt="quote">
-                <h2>Name Surname</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi porro nostrum sunt nisi commodi ex, ducimus saepe tenetur iusto et, dignissimos eaque dolor a debitis facilis veritatis quibusdam maxime ipsum.</p>
-                <img src="" alt="rating">
-            </div>
+            <!-- PRODUCT SECTION -->
+            <section id="products">
 
-            <div class="controls">
-                <img src="" alt="left chevron">
-                <img src="" alt="right chevron">
-            </div>
-        </section>
+                <h2>Products</h2>
 
-    </main>
+                <div class="cards">
+                    <div class="card">
+                        <div class="product-image"></div> <!-- BACKGROUND IMAGE -->
+                        <h3>Title</h3>
+                        <div class="rating"></div> <!-- BACKGROUND IMAGE -->
+                        <h2>11.69€</h2>
+                        <button> <img src="" alt="buy" /> </button>
+                    </div>
+                </div>
 
-    <footer>
-        <div class="upper">
-            <div class="text-1"></div>
-            <div class="text-2"></div>
-            <img src="" alt="logo">
-        </div>
-        <div class="lower">
-            <img src="" alt="up chevron">
-            <div class="social-icons">
-                <img src="" alt="x">
-                <img src="" alt="instagram">
-                <img src="" alt="linkedin">
-            </div>
-        </div>
-    </footer>
+                <div class="controls">
+                    <img src="" alt="left chevron" />
+                    <img src="" alt="right chevron" />
+                </div>
+            </section>
 
-    
-</body>
+            <!-- TESTIMONIALS SECTION -->
+            <section id="testimonials">
+
+                <h2>Testimonials</h2>
+
+                <div class="testimonial">
+                    <div class="pfp">
+                        <img src="" alt="pic" />
+                        <img src="" alt="quote" />
+                    </div>
+                    <h2>Name Surname</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi porro nostrum sunt nisi commodi ex, ducimus
+                        saepe tenetur iusto et, dignissimos eaque dolor a
+                        debitis facilis veritatis quibusdam maxime ipsum.
+                    </p>
+                    <div class="rating"></div> <!-- BACKGROUND IMAGE -->
+                </div>
+
+                <div class="controls">
+                    <img src="" alt="left chevron" />
+                    <img src="" alt="right chevron" />
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <div class="text-1"></div>
+                    <div class="text-2"></div>
+                    <div class="logo"></div> <!-- BACKGROUND IMAGE -->
+                </li>
+                
+                <li>
+                    <img src="" alt="up chevron"/>
+                    <ul class="social-icons">
+                        <li> <img src="" alt="x" /> </li>
+                        <li> <img src="" alt="instagram" /> </li>
+                        <li> <img src="" alt="linkedin" /> </li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="assets/js/script.js"></script>
+        
+    </body>
 </html>
