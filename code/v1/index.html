@@ -4,8 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Coffee Corner</title>
+        <link rel="icon" href="assets/favicon-light.svg" media="(prefers-color-scheme: dark)"/>
+        <link rel="icon" href="assets/favicon-dark.svg" media="(prefers-color-scheme: light)"/>
+
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/responsive.css" />
+
         <link rel="author" href="https://github.com/gkkconan" />
         <link rel="canonical" href="index.html" /> <!-- MORE RAPPRESENTATIVE WEBSITE PAGE URL -->
         <meta name="description" content="
@@ -55,12 +59,16 @@
                 <ul>
                     <li> <a href="" class="active">Home</a> </li>
                     <li> <a href="">Shop</a> </li>
-                    <li> <a href="">Contacts</a> </li>
+                    <li> <a href="pages/our-story.html">Our Story</a> </li>
                     <li> <a href=""> <img src="assets/images/icons/cart.svg" alt="cart" /> </a> </li>
                     <li> <a href=""> <img src="assets/images/icons/profile.svg" alt="profile" /> </a> </li>
                 </ul>
             </nav>
-            <a href=""> <img src="assets/images/icons/hamburger-menu.svg" alt="hamburger-menu" /> </a>
+            <div class="icons">
+                <button onclick="toggleMenu()"> <img src="assets/images/icons/hamburger-menu.svg" alt="hamburger-menu" /> </button>
+                <a href=""> <img src="assets/images/icons/cart.svg" alt="cart" /> </a>
+                <a href=""> <img src="assets/images/icons/profile.svg" alt="profile" /> </a>
+            </div>
         </header>
 
         <main>
@@ -80,67 +88,79 @@
             </section>
 
             <!-- PRODUCT SECTION -->
-            <section id="products">
-
-                <h2>Products</h2>
+            <section id="products" class="center-grid">
+                <h2 class="title">Products</h2>
 
                 <div class="cards">
-                    <div class="card">
-                        <div class="product-image"></div> <!-- BACKGROUND IMAGE -->
-                        <h3>Title</h3>
-                        <div class="rating"></div> <!-- BACKGROUND IMAGE -->
-                        <h2>11.69€</h2>
-                        <button> <img src="" alt="buy" /> </button>
-                    </div>
+                    <!-- <div class="card center-flex">
+                        <span class="img"></span>
+                        <span class="text">
+                            <h3>Qualità Oro - Caffè d'Altura Grani</h3>
+                            <span class="rating-and-price center-flex">
+                                <span class="rating"></span>
+                                <h2>11.69€</h2>
+                            </span>
+                        </span>
+                        <button class="center-grid"> <img src="assets/images/icons/cart.svg" alt="cart buy" /> </button>
+                    </div> -->
                 </div>
 
                 <div class="controls">
-                    <img src="" alt="left chevron" />
-                    <img src="" alt="right chevron" />
+                    <img src="assets/images/icons/chevron.svg" onclick="changeProductPage('dec')" alt="left chevron" />
+                    <img src="assets/images/icons/chevron.svg" onclick="changeProductPage('inc')" alt="right chevron" />
                 </div>
             </section>
 
             <!-- TESTIMONIALS SECTION -->
             <section id="testimonials">
 
-                <h2>Testimonials</h2>
+                <h2 class="title">Testimonials</h2>
 
-                <div class="testimonial">
-                    <div class="pfp">
-                        <img src="" alt="pic" />
-                        <img src="" alt="quote" />
-                    </div>
-                    <h2>Name Surname</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Excepturi porro nostrum sunt nisi commodi ex, ducimus
-                        saepe tenetur iusto et, dignissimos eaque dolor a
-                        debitis facilis veritatis quibusdam maxime ipsum.
-                    </p>
-                    <div class="rating"></div> <!-- BACKGROUND IMAGE -->
+                <div class="testimonial-container">
+                    <!-- <div class="testimonial">
+                        <div class="header">
+                            <div class="pfp">
+                                <img src="assets/images/testimonials/jessica-cooper.jpg" alt="pic" />
+                                <img src="assets/images/icons/quote.svg" alt="quote" />
+                            </div>
+                            <h2>Name Surname</h2>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Excepturi porro nostrum sunt nisi commodi ex, ducimus
+                            saepe tenetur iusto et, dignissimos eaque dolor a
+                            debitis facilis veritatis quibusdam maxime ipsum.
+                        </p>
+                        <span class="rating"></span>
+                    </div> -->
                 </div>
 
-                <div class="controls">
-                    <img src="" alt="left chevron" />
-                    <img src="" alt="right chevron" />
-                </div>
+                <!-- <div class="controls">
+                    <img src="assets/images/icons/chevron.svg" alt="left chevron" />
+                    <img src="assets/images/icons/chevron.svg" alt="right chevron" />
+                </div> -->
             </section>
         </main>
 
         <footer>
             <ul>
-                <li>
-                    <div class="text-1"></div>
-                    <div class="text-2"></div>
+                <li class="upper">
+                    <ul class="text">
+                        <li> <a href=""> Home </a> </li>
+                        <li> <a href=""> Shop </a> </li>
+                        <li> <a href=""> Contacts </a> </li>
+                        <li> <a href=""> Privacy Policy </a> </li>
+                        <li> <a href=""> Terms and Conditions </a> </li>
+                    </ul>
                     <div class="logo"></div> <!-- BACKGROUND IMAGE -->
                 </li>
                 
-                <li>
-                    <img src="" alt="up chevron"/>
+                <li class="lower">
+                    <img src="assets/images/icons/chevron.svg" class="back-to-top" alt="up chevron"/>
                     <ul class="social-icons">
-                        <li> <img src="" alt="x" /> </li>
-                        <li> <img src="" alt="instagram" /> </li>
-                        <li> <img src="" alt="linkedin" /> </li>
+                        <li> <a href=""> <img src="assets/images/icons/social/x.svg" alt="x" /> </a> </li>
+                        <li> <a href=""> <img src="assets/images/icons/social/instagram.svg" alt="instagram" /> </a> </li>
+                        <li> <a href=""> <img src="assets/images/icons/social/linkedin.svg" alt="linkedin" /> </a> </li>
                     </ul>
                 </li>
             </ul>

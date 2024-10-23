@@ -1,1 +1,27 @@
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Menu</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Menu"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="#492D12" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="#492D12" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="#492D12" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#492D12;}
+</style>
+<g id="SVGRepo_bgCarrier">
+</g>
+<g id="SVGRepo_tracerCarrier">
+</g>
+<g id="SVGRepo_iconCarrier">
+	<g id="Page-1">
+		<g id="Menu">
+			<g id="Path">
+				<path class="st0" d="M20.8,7H3.2C2.6,7,2,6.4,2,5.8s0.6-1.2,1.2-1.2h17.5c0.7,0,1.2,0.6,1.2,1.2S21.4,7,20.8,7z"/>
+			</g>
+			<g id="Path_00000032612336938836169000000016387662005617138603_">
+				<path class="st0" d="M20.8,19.5H3.2c-0.7,0-1.2-0.6-1.2-1.2S2.6,17,3.2,17h17.5c0.7,0,1.2,0.6,1.2,1.2S21.4,19.5,20.8,19.5z"/>
+			</g>
+			<g id="Path_00000049191583306413319940000007196189689589022100_">
+				<path class="st0" d="M20.8,13.2H3.2C2.6,13.2,2,12.7,2,12s0.6-1.2,1.2-1.2h17.5c0.7,0,1.2,0.6,1.2,1.2S21.4,13.2,20.8,13.2z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

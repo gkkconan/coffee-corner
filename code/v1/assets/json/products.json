@@ -1,0 +1,42 @@
+[
+    {
+        "img": "assets/images/products/oro-altura-beans.png",
+        "name": "Qualità Oro - Caffè d'Altura Grani",
+        "price": "11.69€"
+    },
+    {
+        "img": "assets/images/products/tierra-amazonia-beans.png",
+        "name": "¡Tierra! For Amazonia Grani",
+        "price": "11.69€"
+    },
+    {
+        "img": "assets/images/products/espresso-barista-intenso.png",
+        "name": "Espresso Barista Intenso Grani",
+        "price": "19.99€"
+    },
+    {
+        "img": "assets/images/products/tierra-wellness-beans.png",
+        "name": "¡Tierra! Wellness Caffè Decerato Grani",
+        "price": "23.09€"
+    },
+    {
+        "img": "assets/images/products/oro-gran-riserva.png",
+        "name": "Qualità Oro Gran Riserva Grani",
+        "price": "23.99€"
+    },
+    {
+        "img": "assets/images/products/espresso-barista-organic.png",
+        "name": "Espresso Barista Organic Grani",
+        "price": "22.99€"
+    },
+    {
+        "img": "assets/images/products/crema-gusto-espresso-beans.png",
+        "name": "Crema Gusto Espresso Classico Grani",
+        "price": "8.49€"
+    },
+    {
+        "img": "assets/images/products/tierra-planet-beans.png",
+        "name": "¡Tierra! For Planet Grani",
+        "price": "11.69€"
+    }
+]
