@@ -1,4 +1,10 @@
-export const products = [
+export type Product = {
+  img: string;
+  name: string;
+  price: number;
+};
+
+const products: Product[] = [
   {
       img: "/icons/product-placeholder.svg",
       name: "Qualità Oro - Caffè d'Altura Grani",
@@ -40,3 +46,5 @@ export const products = [
       price: 11.69
   }
 ];
+
+export default products;

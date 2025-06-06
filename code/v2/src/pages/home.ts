@@ -1,10 +1,13 @@
 import chevronIcon from '/icons/chevron.svg';
-import { products } from '@/data/products';
-import { productCard } from '@/components/product';
-
 import quoteIcon from '/icons/quote.svg';
-import testimonialsReviews from '@/data/testimonialsReviews';
+import { productCard } from '@/components/product';
 import { carousel } from '@/components/carousel';
+import products from '@/data/products';
+import type { Product } from '@/data/products';
+import testimonialsReviews from '@/data/testimonialsReviews';
+
+const productsPerPage = 6;
+let productPage = 0;
 
 const testimonialsCards = testimonialsReviews.map(review => `
   <div class="testimonial">
@@ -20,7 +23,28 @@ const testimonialsCards = testimonialsReviews.map(review => `
   </div>
 `).join("\n")
 
-const productCards = products.slice(0, 6).map(product => productCard(product.name, product.price, product.img)).join("\n")
+const renderProducts = (products: Product[], page: number) => {
+  if(!products || products.length === 0) return "<p>No products available.</p>";
+  const productsToRender = products.slice(page * productsPerPage, (page + 1) * productsPerPage);
+  return productsToRender.map(product => productCard(product.name, product.price, product.img)).join("\n");
+};
+
+export function changeProductPage(action: "inc" | "dec") {
+  if(!products || products.length === 0) return;
+  const totalPages = Math.ceil(products.length / productsPerPage);
+
+  if(action === "inc") productPage = productPage < totalPages - 1 ? productPage + 1 : 0;
+  else productPage = productPage > 0 ? productPage - 1 : totalPages - 1;
+
+  const cardsContainer = document.querySelector(".cards");
+  if(cardsContainer) cardsContainer.innerHTML = renderProducts(products, productPage);
+}
+
+export function initProductSectionControls() {
+  document.getElementById("productSectionLeftControl")?.addEventListener("click", () => changeProductPage("dec"));
+  document.getElementById("productSectionRightControl")?.addEventListener("click", () => changeProductPage("inc"));
+}
+
 
 export function homePage(): string {
   return `
@@ -31,11 +55,11 @@ export function homePage(): string {
     <section id="products" class="center-grid">
         <h2 class="title">Products</h2>
 
-        <div class="cards">${productCards}</div>
+        <div class="cards">${renderProducts(products, productPage)}</div>
 
         <div class="controls">
-            <img src="/icons/chevron.svg" onclick="changeProductPage('dec')" alt="left chevron" />
-            <img src="/icons/chevron.svg" onclick="changeProductPage('inc')" alt="right chevron" />
+            <img id="productSectionLeftControl" src="/icons/chevron.svg" alt="left chevron" />
+            <img id="productSectionRightControl" src="/icons/chevron.svg" alt="right chevron" />
         </div>
     </section>
 

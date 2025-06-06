@@ -1,6 +1,7 @@
 import { navbar } from "@/components/navbar";
 import { footer, attachFooterEvents } from "@/components/footer";
 import { initCarouselControls } from "@/components/carousel";
+import { initProductSectionControls } from "@/pages/home";
 
 import { homePage } from "@/pages/home";
 import { shopPage } from "@/pages/shop";
@@ -42,5 +43,6 @@ export function router(): void {
     render(route.page());
     attachFooterEvents();
     initCarouselControls();
+    initProductSectionControls();
   });
 }
