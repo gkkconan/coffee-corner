@@ -5,27 +5,27 @@ leftControl = document.querySelector(".controls > img:nth-child(1)")
 rightControl = document.querySelector(".controls > img:nth-child(3)")
 productPage = 1, counter = 0
 menu = false
-let carousel = "assets/json/carousel.json";
-let products = "assets/json/products.json";
-let testimonials = "assets/json/testimonials.json";
+let carousel = "../assets/json/carousel.json";
+let products = "../assets/json/products.json";
+let testimonials = "../assets/json/testimonials.json";
 
 
 
 
 
 function retrieveData(file){
-    return fetch(file)
-        .then(response => response.json())
-        .catch(error => { return null });
+  return fetch(file)
+    .then(response => response.json())
+    .catch(error => { return null });
 }
 
 function changeCarouselBG(control, count){
     retrieveData(carousel).then(carouselSlides => {
-        if(count != undefined){ counter = count }
-        else{ control == 'leftControl' ? counter-- : counter++ }
+      if(count != undefined){ counter = count }
+      else{ control == 'leftControl' ? counter-- : counter++ }
 
-        carouselElement.style.backgroundImage = `url('${carouselSlides[counter].src}')`;
-        carouselText.innerHTML = carouselSlides[counter].text;
+      carouselElement.style.backgroundImage = `url('${carouselSlides[counter].src}')`;
+      carouselText.innerHTML = carouselSlides[counter].text;
     })
 }
 
@@ -34,49 +34,49 @@ function createProducts(productsList, page){
         min = (page - 1) * 4
         max = min + 4
         document.querySelector(".cards").remove()
-        
+
         for(let i = min; i < max; i++){
             if(products[i]){
                 const controls = document.querySelector("#products .controls")
                 const cards = document.createElement("div");
                 cards.className = "cards";
-                
+
                 const card = document.createElement("div");
                 card.className = "card center-flex";
-                
+
                 const img = document.createElement("span");
                 img.style.background = `url('${products[i].img}') center/cover no-repeat`;
                 img.className = "img"
                 card.appendChild(img);
-                
+
                 const textSpan = document.createElement("span");
                 textSpan.className = "text";
                 card.appendChild(textSpan);
-                
+
                 const h3 = document.createElement("h3");
                 h3.textContent = products[i].name;
                 textSpan.appendChild(h3);
-                
+
                 const ratingAndPriceSpan = document.createElement("span");
                 ratingAndPriceSpan.className = "rating-and-price center-flex";
                 textSpan.appendChild(ratingAndPriceSpan);
-                
+
                 const ratingDiv = document.createElement("div");
                 ratingDiv.className = "rating";
                 ratingAndPriceSpan.appendChild(ratingDiv);
-                
+
                 const h2 = document.createElement("h2");
                 h2.textContent = products[i].price
                 ratingAndPriceSpan.appendChild(h2);
-                
+
                 const button = document.createElement("button");
                 button.className = "center-grid";
                 card.appendChild(button);
-                
+
                 const cartImg = document.createElement("img");
                 cartImg.src = "assets/images/icons/cart.svg";
                 button.appendChild(cartImg);
-                
+
                 document.querySelector("#products").insertBefore(cards, controls);
                 document.querySelector("#products .cards").appendChild(card);
             }
