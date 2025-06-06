@@ -1,8 +1,8 @@
-@media screen and (max-width: 900px){
+@media screen and (max-width: 915px){
     .testimonial{width: 80%;}
 }
 
-@media screen and (max-width: 768px){   /*** MOBILE BREAKPOINT ***/   
+@media screen and (max-width: 768px){   /*** MOBILE BREAKPOINT ***/
     header ul{display: none;}
     header > a img{display: grid; place-items: center; width: 30px; height: 30px;}
     nav ul li:nth-last-child(-n+2){display: none;}
@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 481px){
     .card{max-width: 400px; width: auto;}
-    
+
     .testimonial{width: 100%;}
 
     footer .text{max-height: 100%;}
