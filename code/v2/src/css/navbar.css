@@ -31,7 +31,7 @@ li:nth-child(-n+3) a:hover::after, li a.active::after{
 
 
 
-/*** MOBILE BREAKPOINT ***/
+/*** RESPONSIVE ***/
 @media screen and (max-width: 768px){
     header ul{display: none;}
     header > a img{display: grid; place-items: center; width: 30px; height: 30px;}

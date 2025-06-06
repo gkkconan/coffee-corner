@@ -14,7 +14,6 @@ footer .text li{display: flex; margin: 2px 10px 2px 2px;}
 .social-icons li:nth-child(-n+3) a:hover::after{width: 0%;}
 
 
+
 /*** RESPONSIVE ***/
-@media screen and (max-width: 481px){
-    footer .text{max-height: 100%;}
-}
+@media screen and (max-width: 481px){ footer .text{max-height: 100%;} }

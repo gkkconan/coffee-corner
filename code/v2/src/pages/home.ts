@@ -2,6 +2,23 @@ import chevronWhiteIcon from '/icons/chevron-white.svg';
 import chevronIcon from '/icons/chevron.svg';
 import cartIcon from '/icons/cart.svg';
 
+import quoteIcon from '/icons/quote.svg';
+import testimonialsReviews from '../data/testimonialsReviews';
+
+const testimonialsCards = testimonialsReviews.map(review => `
+  <div class="testimonial">
+      <div class="header">
+          <div class="pfp">
+              <img src="${review.pic}" alt="pic" />
+              <img src="${quoteIcon}" alt="quote" />
+          </div>
+          <h2>${review.name} ${review.surname}</h2>
+      </div>
+      <p>${review.message}</p>
+      <span class="rating"></span>
+  </div>
+`).join("\n")
+
 export function homePage(): string {
   return `
     <!-- CAROUSEL -->
@@ -47,26 +64,9 @@ export function homePage(): string {
     <section id="testimonials">
 
         <h2 class="title">Testimonials</h2>
+        <div class="testimonial-container">${testimonialsCards}</div>
 
-        <div class="testimonial-container">
-            <!-- <div class="testimonial">
-                <div class="header">
-                    <div class="pfp">
-                        <img src="assets/images/testimonials/jessica-cooper.jpg" alt="pic" />
-                        <img src="assets/images/icons/quote.svg" alt="quote" />
-                    </div>
-                    <h2>Name Surname</h2>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi porro nostrum sunt nisi commodi ex, ducimus
-                    saepe tenetur iusto et, dignissimos eaque dolor a
-                    debitis facilis veritatis quibusdam maxime ipsum.
-                </p>
-                <span class="rating"></span>
-            </div> -->
-        </div>
-
+        <!-- WIP -->
         <!-- <div class="controls">
             <img src="${chevronIcon}" alt="left chevron" />
             <img src="${chevronIcon}" alt="right chevron" />
