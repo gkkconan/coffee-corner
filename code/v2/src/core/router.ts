@@ -1,13 +1,14 @@
-import { navbar } from "../components/navbar";
-import { footer, attachFooterEvents } from "../components/footer";
+import { navbar } from "@/components/navbar";
+import { footer, attachFooterEvents } from "@/components/footer";
+import { initCarouselControls } from "@/components/carousel";
 
-import { homePage } from "../pages/home";
-import { shopPage } from "../pages/shop";
-import { cartPage } from "../pages/cart";
-import { profilePage } from "../pages/profile";
-import { ourStoryPage } from "../pages/ourStory";
-import { notFoundPage } from "../pages/notFound";
-import { isAuthenticated } from "../core/auth";
+import { homePage } from "@/pages/home";
+import { shopPage } from "@/pages/shop";
+import { cartPage } from "@/pages/cart";
+import { profilePage } from "@/pages/profile";
+import { ourStoryPage } from "@/pages/ourStory";
+import { notFoundPage } from "@/pages/notFound";
+import { isAuthenticated } from "@/core/auth";
 
 interface Route {
   page: () => string;
@@ -40,5 +41,6 @@ export function router(): void {
   requestAnimationFrame(() => {
     render(route.page());
     attachFooterEvents();
+    initCarouselControls();
   });
 }

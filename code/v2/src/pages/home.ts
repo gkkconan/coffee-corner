@@ -1,9 +1,9 @@
-import chevronWhiteIcon from '/icons/chevron-white.svg';
 import chevronIcon from '/icons/chevron.svg';
 import cartIcon from '/icons/cart.svg';
 
 import quoteIcon from '/icons/quote.svg';
-import testimonialsReviews from '../data/testimonialsReviews';
+import testimonialsReviews from '@/data/testimonialsReviews';
+import { carousel } from '@/components/carousel';
 
 const testimonialsCards = testimonialsReviews.map(review => `
   <div class="testimonial">
@@ -22,19 +22,7 @@ const testimonialsCards = testimonialsReviews.map(review => `
 export function homePage(): string {
   return `
     <!-- CAROUSEL -->
-    <section id="carousel" class="center-grid">
-
-        <div class="carousel center-grid">
-            <h3>Discover all our products!</h3>
-
-            <div class="controls">
-                <img src="${chevronWhiteIcon}" alt="left chevron" />
-                <h1>Where passion <br> and coffee blend</h1>
-                <img src="${chevronWhiteIcon}" alt="right chevron" />
-            </div>
-        </div>
-
-    </section>
+    ${carousel()}
 
     <!-- PRODUCT SECTION -->
     <section id="products" class="center-grid">
