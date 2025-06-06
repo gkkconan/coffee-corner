@@ -1,6 +1,7 @@
 @import "navbar.css";
 @import "footer.css";
 @import "home.css";
+@import "product.css";
 
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: "PT Sans", Calibri, Tahoma, sans-serif;}
 ::selection{color: var(--cafe-noir); background: var(--white-chocolate);}

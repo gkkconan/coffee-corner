@@ -1,5 +1,6 @@
 import chevronIcon from '/icons/chevron.svg';
-import cartIcon from '/icons/cart.svg';
+import { products } from '@/data/products';
+import { productCard } from '@/components/product';
 
 import quoteIcon from '/icons/quote.svg';
 import testimonialsReviews from '@/data/testimonialsReviews';
@@ -19,6 +20,8 @@ const testimonialsCards = testimonialsReviews.map(review => `
   </div>
 `).join("\n")
 
+const productCards = products.slice(0, 6).map(product => productCard(product.name, product.price, product.img)).join("\n")
+
 export function homePage(): string {
   return `
     <!-- CAROUSEL -->
@@ -28,19 +31,7 @@ export function homePage(): string {
     <section id="products" class="center-grid">
         <h2 class="title">Products</h2>
 
-        <div class="cards">
-            <!-- <div class="card center-flex">
-                <span class="img"></span>
-                <span class="text">
-                    <h3>Qualità Oro - Caffè d'Altura Grani</h3>
-                    <span class="rating-and-price center-flex">
-                        <span class="rating"></span>
-                        <h2>11.69€</h2>
-                    </span>
-                </span>
-                <button class="center-grid"> <img src="${cartIcon}" alt="cart buy" /> </button>
-            </div> -->
-        </div>
+        <div class="cards">${productCards}</div>
 
         <div class="controls">
             <img src="/icons/chevron.svg" onclick="changeProductPage('dec')" alt="left chevron" />

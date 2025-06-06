@@ -17,6 +17,12 @@
 
 
 
+/*** PRODUCT SECTION ***/
+#products{position: relative;}
+.cards{max-width: 1000px; display: flex; flex-flow: row wrap; justify-content: center;}
+
+
+
 /*** TESTIMONIALS SECTION ***/
 #testimonials{margin: 50px 0;}
 .testimonial-container{display: flex; flex-flow: row wrap; justify-content: space-between;}
