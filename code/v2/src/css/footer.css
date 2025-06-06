@@ -1,0 +1,20 @@
+footer{background: var(--white-chocolate);}
+footer .logo{width: 200px; height: 60px; background: url('/brand/logo.svg') center/contain no-repeat;}
+
+footer .upper{display: flex; justify-content: space-between; padding: 25px 25px 50px 25px;}
+footer .text{width: 50%; max-height: 80px; display: flex; flex-flow: column wrap; margin-right: 25px;}
+footer .text li{display: flex; margin: 2px 10px 2px 2px;}
+
+.lower{display: flex; justify-content: space-between; padding: 50px 25px 25px 25px;}
+.back-to-top{cursor: pointer; transition: .25s}
+.back-to-top:hover{translate: 0 -3px; transition: .25s;}
+
+.social-icons{display: flex;}
+.social-icons li{display: grid; margin-inline: 5px;}
+.social-icons li:nth-child(-n+3) a:hover::after{width: 0%;}
+
+
+/*** RESPONSIVE ***/
+@media screen and (max-width: 481px){
+    footer .text{max-height: 100%;}
+}

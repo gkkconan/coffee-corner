@@ -1,0 +1,16 @@
+/*** CAROUSEL SECTION ***/
+#carousel{width: 100%; height: calc(100vh - 70px);}
+
+.carousel{
+    width: 80vw; height: 80%;
+    position: relative;
+    border-radius: 15px;
+    background: url('/carouselSlides/01.jpg'), #00000050;
+    background-blend-mode: multiply;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.carousel h1{position: relative; font-size: 3.5rem;}
+.carousel h3{position: absolute; right: 17px; bottom: 17px; font-weight: normal;}

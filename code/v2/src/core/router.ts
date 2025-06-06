@@ -1,4 +1,5 @@
 import { navbar } from "../components/navbar";
+import { footer, attachFooterEvents } from "../components/footer";
 
 import { homePage } from "../pages/home";
 import { shopPage } from "../pages/shop";
@@ -28,7 +29,7 @@ export function router(): void {
   if(!app) return;
 
   const render = (content: string) => {
-    app.innerHTML = `${navbar()}<main>${content}</main>`;
+    app.innerHTML = `${navbar()}<main>${content}</main>${footer()}`;
   };
 
   if(route.protected && !isAuthenticated()){
@@ -36,5 +37,8 @@ export function router(): void {
     return;
   }
 
-  requestAnimationFrame(() => render(route.page()));
+  requestAnimationFrame(() => {
+    render(route.page());
+    attachFooterEvents();
+  });
 }
