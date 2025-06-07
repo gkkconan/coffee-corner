@@ -3,12 +3,13 @@ import carouselSlides from "@/data/carouselSlides";
 
 let counter = 0;
 
-export function changeCarouselBG(control: "leftControl" | "rightControl", count?: number){
+export function changeCarouselBG(control: "prev" | "next", count?: number){
   const carouselElement = document.querySelector(".carousel") as HTMLElement;
   const carouselText = document.getElementById("carouselText") as HTMLElement;
+  if(!carouselElement || !carouselText) return;
 
   if(count !== undefined) counter = count;
-  else control === "leftControl" ? counter-- : counter++;
+  else control === "prev" ? counter-- : counter++;
 
   if (counter < 0) counter = carouselSlides.length - 1;
   if (counter >= carouselSlides.length) counter = 0;
@@ -18,15 +19,18 @@ export function changeCarouselBG(control: "leftControl" | "rightControl", count?
 }
 
 export function initCarouselControls(){
-  const leftControl = document.getElementById("leftControl") as HTMLImageElement;
-  const rightControl = document.getElementById("rightControl") as HTMLImageElement;
+  const controlsContainer = document.querySelector(".controls[data-scope='carousel']");
+  if (!controlsContainer) return;
+  const leftControl = controlsContainer.querySelector("[data-control='prev']") as HTMLImageElement;
+  const rightControl = controlsContainer.querySelector("[data-control='next']") as HTMLImageElement;
+  if(!leftControl || !rightControl) return;
 
   leftControl.addEventListener("click", () => {
-    counter <= 0 ? changeCarouselBG("leftControl", carouselSlides.length - 1) : changeCarouselBG("leftControl");
+    counter <= 0 ? changeCarouselBG("prev", carouselSlides.length - 1) : changeCarouselBG("prev");
   });
 
   rightControl.addEventListener("click", () => {
-    counter < carouselSlides.length - 1 ? changeCarouselBG("rightControl") : changeCarouselBG("rightControl", 0);
+    counter < carouselSlides.length - 1 ? changeCarouselBG("next") : changeCarouselBG("next", 0);
   });
 }
 
@@ -36,10 +40,10 @@ export function carousel(): string {
         <div class="carousel center-grid">
             <h3>Discover all our products!</h3>
 
-            <div class="controls">
-                <img id="leftControl" src="${chevronWhiteIcon}" alt="left chevron" />
+            <div class="controls" data-scope="carousel">
+                <img data-control="prev" src="${chevronWhiteIcon}" alt="left chevron" />
                 <h1 id="carouselText">Where passion <br> and coffee blend</h1>
-                <img id="rightControl" src="${chevronWhiteIcon}" alt="right chevron" />
+                <img data-control="next" src="${chevronWhiteIcon}" alt="right chevron" />
             </div>
         </div>
     </section>
