@@ -39,7 +39,7 @@ export function footer(): string {
   `;
 }
 
-export function attachFooterEvents(): void {
+export function initFooterEvents(): void {
   const btn = document.querySelector<HTMLImageElement>(".back-to-top");
   if(!btn) return;
   btn.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }) });

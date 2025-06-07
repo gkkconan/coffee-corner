@@ -1,7 +1,7 @@
 import { navbar } from "@/components/navbar";
-import { footer, attachFooterEvents } from "@/components/footer";
+import { footer, initFooterEvents } from "@/components/footer";
 import { initCarouselControls } from "@/components/carousel";
-import { initProductSectionControls } from "@/pages/home";
+import { initProductsList } from "@/components/productsList";
 
 import { homePage } from "@/pages/home";
 import { shopPage } from "@/pages/shop";
@@ -9,7 +9,11 @@ import { cartPage } from "@/pages/cart";
 import { profilePage } from "@/pages/profile";
 import { ourStoryPage } from "@/pages/ourStory";
 import { notFoundPage } from "@/pages/notFound";
+
 import { isAuthenticated } from "@/core/auth";
+
+import cartItems from "@/data/cartItems";
+import products from "@/data/products";
 
 interface Route {
   page: () => string;
@@ -41,8 +45,11 @@ export function router(): void {
 
   requestAnimationFrame(() => {
     render(route.page());
-    attachFooterEvents();
+
+    initFooterEvents();
     initCarouselControls();
-    initProductSectionControls();
+
+    initProductsList(products, "bestsellers", 6)
+    initProductsList(cartItems, "cart-items", 3)
   });
 }

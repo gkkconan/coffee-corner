@@ -14,7 +14,7 @@
     margin: 25px;
 }
 
-#cart-items .controls{justify-content: end;}
+#cart-items-container .controls{justify-content: end;}
 
 #sidebar-summary{height: fit-content; display: flex; flex-flow: column wrap;}
 #sidebar-summary > div{margin: 15px;}

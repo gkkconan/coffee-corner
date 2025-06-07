@@ -1,11 +1,5 @@
 import chevronIcon from '/icons/chevron.svg';
-import { productCard } from "@/components/product";
 import cartItems from "@/data/cartItems";
-
-// WIP
-const renderCartItems = () => {
-  return cartItems.slice(0, 3).map((item) => productCard(item.name, item.price, item.img)).join('');
-};
 
 export function cartPage(): string {
   return `
@@ -13,12 +7,12 @@ export function cartPage(): string {
       <h1 class="title">Your shopping cart</h1>
 
       <div id="cart-info" class="center-flex row">
-        <div id="cart-items">
-          ${renderCartItems()}
+        <div id="cart-items-container">
+          <div id="cart-items" class="products" data-scope="cart-items"></div>
 
-          <div class="controls">
-              <img id="productSectionLeftControl" src="${chevronIcon}" alt="left chevron" />
-              <img id="productSectionRightControl" src="${chevronIcon}" alt="right chevron" />
+          <div class="controls" data-scope="cart-items">
+              <img data-control="prev" src="${chevronIcon}" alt="left chevron" />
+              <img data-control="next" src="${chevronIcon}" alt="right chevron" />
           </div>
         </div>
 
