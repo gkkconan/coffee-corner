@@ -5,7 +5,7 @@ export function productCard(name: string, price: number, img: string, id?: numbe
     <div class="card center-flex">
         <span class="img" style="background: url(${img}) center/cover no-repeat"></span>
         <span class="text">
-            <h3>${id} - ${name}</h3>
+            <h3>${name}</h3>
             <span class="rating-and-price center-flex">
                 <span class="rating"></span>
                 <h2>${price}€</h2>
