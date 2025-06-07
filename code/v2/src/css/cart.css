@@ -1,0 +1,73 @@
+#cart h1.title{
+    margin: 50px 0 0 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+#cart-info{
+    max-width: 1250px;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 50px;
+    margin: 25px;
+}
+
+#cart-items .controls{justify-content: end;}
+
+#sidebar-summary{height: fit-content; display: flex; flex-flow: column wrap;}
+#sidebar-summary > div{margin: 15px;}
+
+.order-summary{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    background: var(--white-chocolate);
+}
+.order-summary *{margin: 10px;}
+.order-summary div{display: flex; flex-flow: row wrap; justify-content: space-between;}
+.order-summary .total span{font-size: 25px; font-weight: bold;}
+
+
+.coupon-code{
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--white-chocolate);
+}
+.coupon-code input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px 10px 10px;
+    border-radius: 5px;
+}
+.coupon-code button{
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--white-chocolate);
+    background: var(--cafe-noir);
+}
+
+
+/*** RESPONSIVE ***/
+@media screen and (max-width: 900px){
+    #cart-info{gap: 0;}
+    #sidebar-summary > div{margin: 0;}
+    .order-summary{margin: 15px 0 !important;}
+}
+
+@media screen and (max-width: 790px){
+    #cart-info{
+        width: 100% !important;
+        align-items: center;
+        flex-flow: column-reverse wrap;
+        margin: 0;
+        padding: 0 25px 25px 25px;
+    }
+    #sidebar-summary{width: calc(100% - 25px); margin: 15px;}
+}

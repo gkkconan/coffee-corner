@@ -58,8 +58,8 @@ export function homePage(): string {
         <div class="cards">${renderProducts(products, productPage)}</div>
 
         <div class="controls">
-            <img id="productSectionLeftControl" src="/icons/chevron.svg" alt="left chevron" />
-            <img id="productSectionRightControl" src="/icons/chevron.svg" alt="right chevron" />
+            <img id="productSectionLeftControl" src="${chevronIcon}" alt="left chevron" />
+            <img id="productSectionRightControl" src="${chevronIcon}" alt="right chevron" />
         </div>
     </section>
 
