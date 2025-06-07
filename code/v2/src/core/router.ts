@@ -1,4 +1,4 @@
-import { navbar } from "@/components/navbar";
+import { navbar, initNavbarToggle } from "@/components/navbar";
 import { footer, initFooterEvents } from "@/components/footer";
 import { initCarouselControls } from "@/components/carousel";
 import { initProductsList } from "@/components/productsList";
@@ -46,6 +46,7 @@ export function router(): void {
   requestAnimationFrame(() => {
     render(route.page());
 
+    initNavbarToggle();
     initFooterEvents();
     initCarouselControls();
 

@@ -3,6 +3,7 @@ import profileIcon from "/icons/profile.svg";
 import hamburgerMenuIcon from "/icons/hamburger-menu.svg";
 
 const isActive = (path: string) => (location.hash || "#/home") === `#/${path}` ? "active" : "";
+let menu = false;
 
 const links = [
   { path: "home", label: "Home" },
@@ -11,6 +12,29 @@ const links = [
   { path: "cart", label: "Cart", img: cartIcon },
   { path: "profile", label: "Profile", img: profileIcon },
 ];
+
+export function initNavbarToggle(): void {
+  const navbar = document.querySelector("nav ul") as HTMLElement;
+  const toggleBtn = document.getElementById("toggleNavbarBtn");
+  if (!navbar || !toggleBtn) return;
+
+  toggleBtn.addEventListener("click", () => {
+    if(menu){navbar!.style.display = "none"; menu = false}
+    else{navbar!.style.display = "flex"; menu = true}
+  });
+
+  navbar.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => { navbar.style.display = "none"; menu = false; });
+  });
+
+  const handleResize = () => {
+    if(window.innerWidth > 768){ navbar.style.display = "flex"; menu = true; }
+    else{ navbar.style.display = "none"; menu = false; }
+  };
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+}
 
 export function navbar(): string {
   const navLinks = links
@@ -29,7 +53,7 @@ export function navbar(): string {
         </ul>
       </nav>
       <div class="icons">
-        <button onclick="toggleMenu()"> <img src="${hamburgerMenuIcon}" alt="hamburger-menu" /> </button>
+        <button id="toggleNavbarBtn"> <img src="${hamburgerMenuIcon}" alt="hamburger-menu" /> </button>
         <a href="#/cart"> <img src="${cartIcon}" alt="cart" /> </a>
         <a href="#/profile"> <img src="${profileIcon}" alt="profile" /> </a>
       </div>
