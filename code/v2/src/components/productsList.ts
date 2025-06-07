@@ -18,7 +18,7 @@ export function changeProductPage(items: Product[] | CartItem[], action: "prev" 
   if(action === "next") state.pageIndex = state.pageIndex < totalPages - 1 ? state.pageIndex + 1 : 0;
   else state.pageIndex = state.pageIndex > 0 ? state.pageIndex - 1 : totalPages - 1;
 
-  const cardsContainer = document.querySelector(".products");
+  const cardsContainer = document.querySelector(`#${scope}[data-scope="${scope}"]`);
   if(cardsContainer) cardsContainer.innerHTML = renderProducts(items, state.pageIndex, state.productsPerPage);
 }
 
@@ -35,6 +35,6 @@ export function initProductsList(items: Product[] | CartItem[], scope: string, p
   rightControl.addEventListener("click", () => changeProductPage(items, "next", scope));
 
   const cardsContainer = document.querySelector(`#${scope}[data-scope="${scope}"]`);
-  if (!cardsContainer) return;
+  if(!cardsContainer) return;
   cardsContainer.innerHTML = renderProducts(items, 0, productsPerPage);
 }
