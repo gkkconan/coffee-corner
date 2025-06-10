@@ -50,7 +50,8 @@ export function router(): void {
     initFooterEvents();
     initCarouselControls();
 
-    initProductsList(products, "bestsellers", 6)
-    initProductsList(cartItems, "cart-items", 3)
+    initProductsList(products, "bestsellers", 6)        // home page bestsellers
+    initProductsList(cartItems, "cart-items", 3)        // cart items
+    initProductsList(cartItems, "related-products", 4)  // related products
   });
 }

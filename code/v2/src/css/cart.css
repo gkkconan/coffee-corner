@@ -1,5 +1,6 @@
+#cart{margin-bottom: 50px;}
 #cart h1.title{
-    margin: 50px 0 0 0;
+    margin: 50px 0 15px 0;
     text-align: center;
     font-size: 25px;
     font-weight: normal;
@@ -15,7 +16,7 @@
 }
 
 #cart-items-container .controls{justify-content: end;}
-#cart-items-container .controls p{position: relative; right: 0;} // page number (commented out)
+#cart-items-container .controls p{position: relative; right: 0;} /* page number (commented out) */
 
 #sidebar-summary{height: fit-content; display: flex; flex-flow: column wrap;}
 #sidebar-summary > div{margin: 15px;}

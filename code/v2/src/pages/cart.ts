@@ -1,3 +1,4 @@
+import { relatedProducts } from '@/components/relatedProducts';
 import chevronIcon from '/icons/chevron.svg';
 import cartItems from "@/data/cartItems";
 
@@ -41,6 +42,8 @@ export function cartPage(): string {
         </div>
 
       </div>
+
+      ${relatedProducts()}
     </section>
   `;
 }

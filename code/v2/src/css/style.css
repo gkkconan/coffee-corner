@@ -1,6 +1,10 @@
+/* components */
 @import "navbar.css";
 @import "footer.css";
 @import "product.css";
+@import "relatedProducts.css";
+
+/* pages */
 @import "home.css";
 @import "ourStory.css";
 @import "cart.css";
@@ -43,12 +47,13 @@ main{margin-top: 70px;}
 .rating{width: 115px; height: 20px; display: block; background: url('/icons/full-star.svg') space;}
 
 .controls{width: 100%; display: flex; align-items: center; justify-content: space-between;}
-.controls p{position: absolute; right: 100px;} // page number (commented out)
+.controls p{position: absolute; right: 100px;} /* page number (commented out) */
 .controls img{width: 35px; height: 35px; margin: 10px; cursor: pointer; transition: .5s;}
 .controls img:first-child{rotate: -90deg;}
 .controls img:last-child{rotate: 90deg;}
-.controls img:hover{margin-bottom: 20px; transition: .5s;}
+.controls img:first-child:hover{transform: translateX(5px); transition: .5s;}
+.controls img:last-child:hover{transform: translateX(-5px); transition: .5s;}
 
-#products .controls, #testimonials .controls{width: 100%; height: 50px;}
-#products .controls img:first-child, #testimonials .controls img:first-child{position: absolute; right: 100px;}
-#products .controls img:last-child, #testimonials .controls img:last-child{position: absolute; right: 50px;}
+.products .controls, #testimonials .controls{width: 100%; height: 50px;}
+.products .controls img:first-child, #testimonials .controls img:first-child{position: absolute; right: 100px;}
+.products .controls img:last-child, #testimonials .controls img:last-child{position: absolute; right: 50px;}

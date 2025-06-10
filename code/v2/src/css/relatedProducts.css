@@ -1,0 +1,18 @@
+#related-products{
+    max-width: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#related-products-container{justify-content: center;}
+
+#related-products-container .controls{max-width: 875px; justify-content: end; position: relative;}
+#related-products-container .controls p{position: relative; right: 0;} /* page number (commented out) */
+
+
+
+/*** RESPONSIVE ***/
+@media screen and (max-width: 860px){
+    #related-products{max-width: 435px;}
+}

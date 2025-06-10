@@ -25,7 +25,7 @@ export function homePage(): string {
     ${carousel()}
 
     <!-- PRODUCT SECTION -->
-    <section id="products" class="center-grid">
+    <section id="products" class=" products center-grid">
       <h2 class="title">Products</h2>
 
       <div id="bestsellers" class="cards" data-scope="bestsellers"></div>
