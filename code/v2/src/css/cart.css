@@ -15,6 +15,7 @@
 }
 
 #cart-items-container .controls{justify-content: end;}
+#cart-items-container .controls p{position: relative; right: 0;} // page number (commented out)
 
 #sidebar-summary{height: fit-content; display: flex; flex-flow: column wrap;}
 #sidebar-summary > div{margin: 15px;}

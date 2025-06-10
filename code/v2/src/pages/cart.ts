@@ -12,6 +12,7 @@ export function cartPage(): string {
 
           <div class="controls" data-scope="cart-items">
               <img data-control="prev" src="${chevronIcon}" alt="left chevron" />
+              <!-- <p data-control="page">0</p> --> <!-- uncomment these lines to show page number -->
               <img data-control="next" src="${chevronIcon}" alt="right chevron" />
           </div>
         </div>

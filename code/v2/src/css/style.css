@@ -43,6 +43,7 @@ main{margin-top: 70px;}
 .rating{width: 115px; height: 20px; display: block; background: url('/icons/full-star.svg') space;}
 
 .controls{width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.controls p{position: absolute; right: 100px;} // page number (commented out)
 .controls img{width: 35px; height: 35px; margin: 10px; cursor: pointer; transition: .5s;}
 .controls img:first-child{rotate: -90deg;}
 .controls img:last-child{rotate: 90deg;}

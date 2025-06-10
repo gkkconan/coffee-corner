@@ -19,13 +19,16 @@ export function changeProductPage(items: Product[] | CartItem[], action: "prev" 
   else state.pageIndex = state.pageIndex > 0 ? state.pageIndex - 1 : totalPages - 1;
 
   const cardsContainer = document.querySelector(`#${scope}[data-scope="${scope}"]`);
+  // uncomment these lines to show page number
+  // let pageNumber = document.querySelector(`[data-control="page"]`);
+  // if(pageNumber) pageNumber.innerHTML = String(productsListState[scope].pageIndex);
   if(cardsContainer) cardsContainer.innerHTML = renderProducts(items, state.pageIndex, state.productsPerPage);
 }
 
 export function initProductsList(items: Product[] | CartItem[], scope: string, productsPerPage: number = 6): void {
   productsListState[scope] = { pageIndex: 0, productsPerPage };
   const controlsContainer = document.querySelector(`.controls[data-scope="${scope}"]`);
-  if (!controlsContainer) return;
+  if(!controlsContainer) return;
 
   const leftControl = controlsContainer.querySelector('[data-control="prev"]') as HTMLImageElement;
   const rightControl = controlsContainer.querySelector('[data-control="next"]') as HTMLImageElement;
