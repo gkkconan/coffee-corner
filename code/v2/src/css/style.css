@@ -44,7 +44,6 @@ img{width: 30px;}
 main{margin-top: 70px;}
 .title{text-align: center; font-size: 2em; margin: 25px 0;}
 
-.rating{width: 115px; height: 20px; display: block; background: url('/icons/full-star.svg') space;}
 
 .controls{width: 100%; display: flex; align-items: center; justify-content: space-between;}
 .controls p{position: absolute; right: 100px;} /* page number (commented out) */

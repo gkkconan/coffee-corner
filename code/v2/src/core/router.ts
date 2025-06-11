@@ -52,6 +52,6 @@ export function router(): void {
 
     initProductsList(products, "bestsellers", 6)        // home page bestsellers
     initProductsList(cartItems, "cart-items", 3)        // cart items
-    initProductsList(cartItems, "related-products", 4)  // related products
+    initProductsList(products, "related-products", 4)  // related products
   });
 }

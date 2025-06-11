@@ -11,7 +11,13 @@
 .card .text{width: 60%;}
 .card .rating-and-price{flex-flow: row wrap; justify-content: space-between;}
 .card .rating-and-price h2{margin-right: 10px;}
-.card .rating{margin-right: 10px;}
+
+.card .rating{display: flex; gap: 3px;}
+.rating span{width: 20px; height: 20px; display: block;}
+.rating .full-star{background: url('/icons/full-star.svg');}
+.rating .half-star{background: url('/icons/half-star.svg');}
+.rating .empty-star{background: url('/icons/empty-star.svg');}
+
 .card button{background: var(--dust-storm); margin: 5px; padding: 15px; border-radius: 5px;}
 .card button img{transition: .25s;}
 .card button:hover img{scale: 1.1; transition: .25s;}

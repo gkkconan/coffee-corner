@@ -1,8 +1,17 @@
 import { relatedProducts } from '@/components/relatedProducts';
-import chevronIcon from '/icons/chevron.svg';
 import cartItems from "@/data/cartItems";
+import products from "@/data/products";
+import chevronIcon from '/icons/chevron.svg';
 
 export function cartPage(): string {
+  const subtotal = cartItems.reduce((acc, item) => {
+    const product = products.find(p => p.id === item.id);
+    if(!product) return acc;
+    return acc + product.price * (item.quantity || 1);
+  }, 0);
+  const shippingCosts = 10.00;
+  const total = subtotal + shippingCosts;
+
   return `
     <section id="cart" class="center-flex column">
       <h1 class="title">Your shopping cart</h1>
@@ -22,16 +31,16 @@ export function cartPage(): string {
           <div class="order-summary">
             <div class="subtotal">
               <label>Subtotal:</label>
-              <span>$${cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2)}</span>
+              <span>$${subtotal.toFixed(2)}</span>
             </div>
             <div class="shipping-costs">
               <label>Shipping costs:</label>
-              <span>$${cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2)}</span>
+              <span>$${shippingCosts.toFixed(2)}</span>
             </div>
             <hr>
             <div class="total">
               <label>Total:</label>
-              <span>$${cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2)}</span>
+              <span>$${total.toFixed(2)}</span>
             </div>
           </div>
 
