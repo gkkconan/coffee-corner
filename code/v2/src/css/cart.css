@@ -19,7 +19,7 @@
 #cart-items-container .controls p{position: relative; right: 0;} /* page number (commented out) */
 
 #sidebar-summary{height: fit-content; display: flex; flex-flow: column wrap;}
-#sidebar-summary > div{margin: 15px;}
+#sidebar-summary > div{margin: 15px 0;}
 
 .order-summary{
     width: 100%;
@@ -63,7 +63,7 @@
     .order-summary{margin: 15px 0 !important;}
 }
 
-@media screen and (max-width: 790px){
+@media screen and (max-width: 835px){
     #cart-info{
         width: 100% !important;
         align-items: center;
@@ -71,5 +71,12 @@
         margin: 0;
         padding: 0 25px 25px 25px;
     }
-    #sidebar-summary{width: calc(100% - 25px); margin: 15px;}
+    #sidebar-summary{width: calc(100% - 25px);}
+    .order-summary *{margin: 5px;}
+    .order-summary div{margin: 10px;}
+}
+
+
+@media screen and (max-width: 790px){
+    #cart-info{padding: 0;}
 }

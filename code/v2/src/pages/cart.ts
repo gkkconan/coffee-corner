@@ -30,7 +30,7 @@ export function cartPage(): string {
         <div id="sidebar-summary">
           <div class="order-summary">
             <div class="subtotal">
-              <label>Subtotal:</label>
+              <label>Subtotal (${cartItems.length} products):</label>
               <span>$${subtotal.toFixed(2)}</span>
             </div>
             <div class="shipping-costs">
