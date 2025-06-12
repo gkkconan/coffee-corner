@@ -1,13 +1,14 @@
 /* components */
 @import "navbar.css";
 @import "footer.css";
-@import "product.css";
+@import "productCard.css";
 @import "relatedProducts.css";
 
 /* pages */
 @import "home.css";
 @import "ourStory.css";
 @import "cart.css";
+@import "product.css";
 
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: "PT Sans", Calibri, Tahoma, sans-serif;}
 ::selection{color: var(--cafe-noir); background: var(--white-chocolate);}
@@ -27,6 +28,7 @@
     background-size: contain;
 }
 
+.flex{display: flex;}
 .center-flex{display: flex; align-items: center; justify-content: center;}
 .center-grid, a{display: grid; place-items: center;}
 
