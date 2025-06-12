@@ -9,6 +9,7 @@
 
 .card > .img{width: 60px; height: 80px; margin-right: 5px;}
 .card .text{width: 60%;}
+.card .text a{justify-content: left;}
 .rating-and-price{flex-flow: row wrap; align-items: center; justify-content: space-between;}
 .rating-and-price h2{margin-right: 10px;}
 

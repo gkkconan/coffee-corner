@@ -20,7 +20,7 @@ export function productCard(product: Product): string {
     <div class="card center-flex">
         <a href="#/product/${product.id}" class="img" style="background: url(${product.img}) center/cover no-repeat"></a>
         <span class="text">
-            <h3>${product.name}</h3>
+            <h3><a href="#/product/${product.id}">${product.name}</a></h3>
             <span class="rating-and-price flex">
                 <span class="rating">
                 ${generateStars(product.rating)}
