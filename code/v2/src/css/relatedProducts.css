@@ -1,3 +1,5 @@
+#related-products-wrapper{margin-bottom: 50px;}
+
 #related-products{
     max-width: 1000px;
     display: flex;
@@ -6,7 +8,6 @@
 }
 
 #related-products-container{justify-content: center;}
-
 #related-products-container .controls{max-width: 875px; justify-content: end; position: relative;}
 #related-products-container .controls p{position: relative; right: 0;} /* page number (commented out) */
 

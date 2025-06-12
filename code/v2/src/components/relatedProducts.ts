@@ -2,6 +2,7 @@ import chevronIcon from '/icons/chevron.svg';
 
 export function relatedProducts(): string {
   return `
+  <div id="related-products-wrapper" class="center-flex column">
     <section id="related-products" class="center-flex column">
       <h1 class="title">Related products</h1>
 
@@ -15,5 +16,6 @@ export function relatedProducts(): string {
           </div>
         </div>
     </section>
+  </div>
   `;
 }
