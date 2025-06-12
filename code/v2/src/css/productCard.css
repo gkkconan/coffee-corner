@@ -1,0 +1,28 @@
+.card{
+    width: 400px;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--white-chocolate);
+}
+
+.card > .img{width: 60px; height: 80px; margin-right: 5px;}
+.card .text{width: 60%;}
+.rating-and-price{flex-flow: row wrap; align-items: center; justify-content: space-between;}
+.rating-and-price h2{margin-right: 10px;}
+
+.rating{display: flex; gap: 3px;}
+.rating span{width: 20px; height: 20px; display: block;}
+.rating .full-star{background: url('/icons/full-star.svg');}
+.rating .half-star{background: url('/icons/half-star.svg');}
+.rating .empty-star{background: url('/icons/empty-star.svg');}
+
+button.add-to-cart{background: var(--dust-storm); margin: 5px; padding: 15px; border-radius: 5px;}
+button.add-to-cart img{transition: .25s;}
+button.add-to-cart:hover img{scale: 1.1; transition: .25s;}
+
+
+
+/*** RESPONSIVE ***/
+@media screen and (max-width: 481px){ .card{max-width: 400px; width: auto;} }
