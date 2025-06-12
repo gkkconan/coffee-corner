@@ -9,6 +9,7 @@ import { cartPage } from "@/pages/cart";
 import { profilePage } from "@/pages/profile";
 import { ourStoryPage } from "@/pages/ourStory";
 import { notFoundPage } from "@/pages/notFound";
+import { productPage } from "@/pages/product";
 
 import { isAuthenticated } from "@/core/auth";
 
@@ -30,14 +31,18 @@ const routes: Record<string, Route> = {
 
 export function router(): void {
   const path = location.hash.slice(2) || "home";
-  const route = routes[path] ?? { page: notFoundPage };
   const app = document.getElementById("app");
+  let route = routes[path];
   if(!app) return;
 
-  const render = (content: string) => {
-    app.innerHTML = `${navbar()}<main>${content}</main>${footer()}`;
-  };
+  const render = (content: string) => app.innerHTML = `${navbar()}<main>${content}</main>${footer()}`;
 
+  if(!route && path.startsWith("product/")){
+    const id = path.split("/")[1];
+    if(id) route = { page: () => productPage(Number(id)) };
+  }
+
+  if(!route) route = { page: notFoundPage };
   if(route.protected && !isAuthenticated()){
     render(`<h1>Access Denied</h1>`);
     return;
@@ -45,6 +50,7 @@ export function router(): void {
 
   requestAnimationFrame(() => {
     render(route.page());
+    window.scrollTo(0, 0);
 
     initNavbarToggle();
     initFooterEvents();
