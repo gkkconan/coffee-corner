@@ -1,6 +1,9 @@
 export interface Product {
   id: number;
   name: string;
+  description?: string;
+  size?: string;
+  otherInfo?: {};
   price: number;
   img: string;
   rating: number;
@@ -11,6 +14,17 @@ const products: Product[] = [
     id: 1,
     img: "/icons/product-placeholder.svg",
     name: "Qualità Oro - Caffè d'Altura Grani",
+    description: "On fertile mountain terrain up to 2,000m, the finest Arabica varieties grow and combine to create a coffee with character and personality. A dark-colored blend with fruity and floral notes and a long-lasting crema.",
+    otherInfo: {
+      View: "Golden cream and warm color",
+      Nose: "Full-bodied",
+      Taste: "Velvety",
+      AromaNotes: "Fruit",
+      Toastiness: "Medium",
+      Composition: "100% Arabica",
+      Origin: "Central and South America, Ethiopia"
+    },
+    size: "1KG",
     price: 11.69,
     rating: 4.5
   },
