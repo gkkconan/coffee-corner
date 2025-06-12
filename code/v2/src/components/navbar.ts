@@ -23,9 +23,11 @@ export function initNavbarToggle(): void {
     else{navbar!.style.display = "flex"; menu = true}
   });
 
-  navbar.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => { navbar.style.display = "none"; menu = false; });
-  });
+  if(window.innerWidth <= 768){
+    navbar.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => { navbar.style.display = "none"; menu = false; });
+    });
+  }
 
   const handleResize = () => {
     if(window.innerWidth > 768){ navbar.style.display = "flex"; menu = true; }
