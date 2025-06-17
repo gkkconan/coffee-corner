@@ -1,3 +1,9 @@
+import NotFoundPageGraphic from '/icons/404-page-graphic.svg'
+
 export function notFoundPage(): string {
-  return `<h1>404 Not Found</h1>`;
+  return `
+    <section id="notFound" class="center-flex">
+      <img src="${NotFoundPageGraphic}" />
+    </section>
+  `;
 }

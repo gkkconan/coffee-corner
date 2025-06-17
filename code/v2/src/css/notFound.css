@@ -1,0 +1,6 @@
+section#notFound{width: 100%; min-height: calc(100vh - 250px);}
+section#notFound img{width: 15em;}
+
+@media screen and (max-width: 550px){
+    section#notFound img{width: 15em;}
+}
