@@ -74,6 +74,6 @@ Both versions feature a fully responsive layout and are built using example data
 - `pnpm run dev` to run the project
 
 
-## ✒️ Author
-Developed by [@gkkconan](https://github.com/gkkconan/)
+## ✒️ Author
+Developed by [@gkkconan](https://github.com/gkkconan/).
 Feel free to explore, fork, or contribute to the project.
