@@ -12,7 +12,7 @@
     color: white;
 }
 
-.carousel h1{position: relative; font-size: 3.5rem;}
+.carousel h1{width: 75%; position: relative; font-size: 3.5rem; text-align: left;}
 .carousel h3{position: absolute; right: 17px; bottom: 17px; font-weight: normal;}
 
 
@@ -40,4 +40,5 @@
 
 /*** RESPONSIVE ***/
 @media screen and (max-width: 915px){ .testimonial{width: 80%;} }
+@media screen and (max-width: 550px){ .carousel h1{font-size: 2rem; text-align: center;} }
 @media screen and (max-width: 481px){ .testimonial{width: 100%;} }
