@@ -9,6 +9,7 @@
 @import "ourStory.css";
 @import "cart.css";
 @import "product.css";
+@import "notFound.css";
 
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: "PT Sans", Calibri, Tahoma, sans-serif;}
 ::selection{color: var(--cafe-noir); background: var(--white-chocolate);}
@@ -19,13 +20,6 @@
     --beaver: #A7856C;
     --dust-storm: #E2CCBA;
     --white-chocolate: #F0E6DA;
-}
-
-.inline-logo{
-    width: 300px; height: 30px;
-    margin-right: 30px;
-    background: url('/brand/logo-linear.svg') no-repeat center;
-    background-size: contain;
 }
 
 .flex{display: flex;}

@@ -48,7 +48,7 @@ export function navbar(): string {
 
   return `
     <header>
-      <div class="inline-logo"></div>
+      <div class="logo"></div>
       <nav>
         <ul>
           ${navLinks}
