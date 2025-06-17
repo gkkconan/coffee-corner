@@ -21,9 +21,12 @@ export function changeCarouselBG(control: "prev" | "next", count?: number){
 export function initCarouselControls(){
   const controlsContainer = document.querySelector(".controls[data-scope='carousel']");
   if (!controlsContainer) return;
+  
   const leftControl = controlsContainer.querySelector("[data-control='prev']") as HTMLImageElement;
   const rightControl = controlsContainer.querySelector("[data-control='next']") as HTMLImageElement;
   if(!leftControl || !rightControl) return;
+
+  changeCarouselBG('next', 0)
 
   leftControl.addEventListener("click", () => {
     counter <= 0 ? changeCarouselBG("prev", carouselSlides.length - 1) : changeCarouselBG("prev");
